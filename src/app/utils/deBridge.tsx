@@ -100,7 +100,20 @@ export default function UsdcConverter() {
         </button>
       </form>
       {error && <p className="mt-4 text-red-600">{error}</p>}
-      {success && <p className="mt-4 text-green-600">{success}</p>}
+      {success && (
+  <p className="mt-4 text-green-600 break-words">
+    Transaction successful!{' '}
+    <a
+      href={`https://sepolia.etherscan.io/tx/${success.split('Hash: ')[1]}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 underline break-words"
+    >
+      View Transaction
+    </a>
+  </p>
+)}
+
     </div>
   );
 }
