@@ -17,7 +17,7 @@ declare global {
 export default function SwapButton() {
   const [loading, setLoading] = useState(false);
   const [amount, setAmount] = useState("");
-  const [direction, setDirection] = useState<"usdcToIp" | "ipToUsdc">("usdcToIp");
+  const [direction, setDirection] = useState<"usdcToIp" | "ipToUsdc">("ipToUsdc");
 
   const handleSwap = async () => {
     setLoading(true);
