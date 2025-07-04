@@ -44,9 +44,11 @@ export const swapTokens = async (
       signer
     );
 
-    return await tx.wait();
+    return  tx;
   } catch (err) {
     console.error("Swap error:", err);
     throw err;
   }
 };
+
+
